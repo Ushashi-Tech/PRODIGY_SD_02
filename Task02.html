@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Circle Guessing Game</title>
+    <link rel="stylesheet" href="Task02.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎯 Gradient Guessing Game</h1>
+        
+        <div class="range-display">
+            Guess a number between <span id="minRange">1</span> and <span id="maxRange">100</span>
+        </div>
+
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-range="100">Easy (1-100)</button>
+            <button class="difficulty-btn" data-range="500">Medium (1-500)</button>
+            <button class="difficulty-btn" data-range="1000">Hard (1-1000)</button>
+        </div>
+
+        <div class="circle-container">
+            <div class="gradient-circle" id="gradientCircle">
+                <div class="circle-inner">
+                    <div class="target-display">🎲 Mystery Number</div>
+                    <div class="attempts-display">Attempts: <span id="attempts">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="number" class="guess-input" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+            <button class="submit-btn" id="submitBtn">Guess!</button>
+        </div>
+
+        <div class="feedback" id="feedback">Make your first guess!</div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="currentAttempts">0</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="bestScore">-</div>
+                <div class="stat-label">Best</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="gamesPlayed">0</div>
+                <div class="stat-label">Games</div>
+            </div>
+        </div>
+
+        <button class="new-game-btn" id="newGameBtn">New Game</button>
+    </div>
+
+    <script src="Task02.js"></script>
+</body>
+</html>
